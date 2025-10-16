@@ -1,8 +1,8 @@
 :root {
-    --color1: linear-gradient(to right, rgb(249, 76, 249), rgb(122, 9, 122) 70%);
+    --color1: linear-gradient(to right, rgb(249, 76, 249), rgb(92, 0, 117) 80%);
     --color2: linear-gradient(to right, #ff00ff, #8000ff);
     --color3: linear-gradient(to right, purple 0%, skyblue 100%);
-    --black-pink-gradient: linear-gradient(360deg, #ff1493 0%, #0a0a0a 100%); 
+    --blue-purple-gradient: linear-gradient(180deg, #148dff 25%, #6a00b1 100%); 
 }
 
 * {
@@ -14,7 +14,7 @@
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background: var(--black-pink-gradient); 
+    background: var(--blue-purple-gradient); 
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -23,12 +23,32 @@ body {
 .nav-link:hover {
     color: rgb(238, 130, 202);
     border-radius: 20px;
+    transition: color 0.3s ease;
 }
 
 .nav-link {
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: rgb(17, 9, 105);
 }
+
+.nav-link.active {  
+    color: rgb(17, 9, 105) !important;  
+}
+
+.navbar-dark .nav-link {
+    color: rgb(17, 9, 105) !important;  
+}
+
+.navbar-dark .nav-link:hover {
+    color: rgb(238, 130, 202) !important;
+}
+
+.navbar-brand img {
+  border-radius: 50%; 
+  object-fit: contain;
+  margin-right: 10px;
+}
+
 
 .fw-bold {
     background: var(--color2);
@@ -38,19 +58,23 @@ body {
 }
 
 .navbar-brand {
-    color: black; 
+    color: rgb(17, 9, 105); 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
     font-weight: bold; 
+    font-family: 'Poppins', sans-serif;
+    display: flex; 
+    align-items: center;  
 }
 
 .navbar-toggler:hover {
     background-color: #1d1d1d;
     opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .navbar {
-    backdrop-filter: blur(20px) saturate(150%) brightness(150%);
-    background: rgba(46, 46, 46, 0.8);
+    backdrop-filter: blur(-5px) saturate(0%) brightness(20%);
+    background: rgba(255, 255, 255, 0.756);
     border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 1rem;
     margin-left: 2cm !important;
@@ -115,31 +139,13 @@ body {
     word-break: break-word; 
 }
 
-#projects .card {
-    transition: transform 0.3s ease;
-}
-
-#projects .card:hover {
-    transform: translateY(-5px);
-}
-
-#skills .progress {
-    height: 10px;
-    background-color: #e9ecef;
-}
-
-#skills .progress-bar {
-    background: var(--color2);
-}
-
-
 #my-contacts {
     background: rgba(255, 20, 147, 0.1); 
 }
 
 #my-contacts i {
     font-size: 1.5rem;
-    color: #ff1493;
+    color: #148dff;
     margin-right: 10px;
 }
 
