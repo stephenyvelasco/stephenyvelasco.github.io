@@ -2,7 +2,7 @@
     --color1: linear-gradient(to right, rgb(249, 76, 249), rgb(92, 0, 117) 80%);
     --color2: linear-gradient(to right, #ff00ff, #8000ff);
     --color3: linear-gradient(to right, purple 0%, skyblue 100%);
-    --blue-purple-gradient: linear-gradient(180deg, #148dff 25%, #6a00b1 100%); 
+    --blue-purple-gradient: linear-gradient(-45deg, #148dff, #6a00b1, #b666ff, #148dff);
 }
 
 * {
@@ -11,11 +11,24 @@
     box-sizing: border-box;
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background: var(--blue-purple-gradient); 
-    background-attachment: fixed;
+    background: var(--blue-purple-gradient);
+    background-size: 400% 400%;
+    animation: gradientMove 20s ease-in-out infinite;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
@@ -44,17 +57,8 @@ body {
 }
 
 .navbar-brand img {
-  border-radius: 50%; 
-  object-fit: contain;
-  margin-right: 10px;
-}
-
-
-.fw-bold {
-    background: var(--color2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    object-fit: contain;
+    margin-right: 10px;
 }
 
 .navbar-brand {
@@ -67,15 +71,20 @@ body {
 }
 
 .navbar-toggler:hover {
-    background-color: #1d1d1d;
+    background-color: (135, 206, 235);
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
 
 .navbar {
-    backdrop-filter: blur(-5px) saturate(0%) brightness(20%);
-    background: rgba(255, 255, 255, 0.756);
+    background: rgba(250, 247, 247, 0.50);
+    backdrop-filter: blur(8px) saturate(200px);
     box-shadow: inset;
+}
+
+.navbar .container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .home-page {
@@ -83,17 +92,24 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.home-page .col-5 {
+  min-width: 0; 
 }
 
 .profile-img-container {
     width: 100%;
-    max-width: 400px; 
+    max-width: 350px; 
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-    background-color: #ffc0cb; 
+
 }
 
 .profile-img-container img {
@@ -103,6 +119,18 @@ body {
     display: block;
 }
 
+.card {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px) saturate(120%);
+    box-shadow: inset;
+    border-radius: 35px;
+    width: 100%;
+    max-width: 11280px;
+    position: relative;
+    margin: auto;
+    padding: 45px;
+
+}
 
 @supports not (aspect-ratio: 1 / 1) {
     .profile-img-container {
@@ -118,19 +146,46 @@ body {
     }
 }
 
-.display-3 > span {
-    background: var(--color1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: bold;
+.display-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.7rem;
+    font-weight: 700;
+    word-break: break-word;
+    line-height: 1;
+   
+
 }
 
+.display-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 500;
+
+}
+
+.display-3 {
+    font-size: 1.5rem;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.smaller-text {
+    font-size: 0.9rem; 
+    line-height: 1.5;
+}
+
+.intro-text, .display-3 {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
 .about-description {
     font-size: 1.1rem;
     line-height: 1.6;
     color: white; 
 }
+
 .text-justified {
     text-align: justify;
     word-break: break-word; 
@@ -174,15 +229,6 @@ body {
         max-width: 250px; 
     }
 
-    .display-3 {
-        font-size: 2rem;
-        line-height: 1.1;
-    }
-
-    .display-3 > span {
-        font-size: inherit;
-    }
-
     .intro-text p,
     .about-description {
         font-size: 0.95rem;
@@ -202,6 +248,25 @@ body {
         backdrop-filter: blur(-5px) saturate(0%) brightness(20%);
         background: rgba(135, 206, 235, 0.616);
         padding: 0.5rem;
+    }
+    
+    .display-1{
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .display-2{
+        font-size: 1.2rem;
+        margin-top: 50px;
+        margin-bottom: 1px;
+    }
+    .display-3{
+        font-size: 0.9rem;
+    }
+
+    .card{
+        padding: 1.8rem;
     }
 }
 
