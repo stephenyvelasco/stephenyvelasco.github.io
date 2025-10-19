@@ -25,7 +25,7 @@ body {
     scroll-behavior: smooth;
     background: var(--blue-purple-gradient);
     background-size: 400% 400%;
-    animation: gradientMove 20s ease-in-out infinite;
+    animation: gradientMove 10s ease-in-out infinite;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
@@ -203,7 +203,7 @@ body {
 
 @media (max-width: 768px) {
     .home-page {
-        margin-top: 6rem;
+        margin-top: 1rem;
         padding: 1rem;
         flex-direction: column;
         text-align: center;
@@ -264,15 +264,9 @@ body {
         font-size: 13px;
         text-align: center;
     }
-    .body{
+    body{
         background-size: 400% 400%;
         animation: gradientMove 20s ease-in-out infinite;
-    }
-
-    @keyframes gradientMove {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
     }
 
 }
