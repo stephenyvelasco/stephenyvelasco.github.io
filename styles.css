@@ -77,11 +77,11 @@ body {
 .home-page {
     margin-top: 2em;
     min-height: 100vh;
+    padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem;
 }
 
 .home-page .row {
@@ -203,8 +203,8 @@ body {
 
 @media (max-width: 768px) {
     .home-page {
-        margin-top: 1rem;
-        padding: 1rem;
+        margin-top: 0;
+        padding-top: 120px;
         flex-direction: column;
         text-align: center;
     }
