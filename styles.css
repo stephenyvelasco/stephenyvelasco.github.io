@@ -1,8 +1,5 @@
 :root {
-    --color1: linear-gradient(to right, rgb(249, 76, 249), rgb(92, 0, 117) 80%);
-    --color2: linear-gradient(to right, #ff00ff, #8000ff);
-    --color3: linear-gradient(to right, purple 0%, skyblue 100%);
-    --blue-purple-gradient: linear-gradient(-45deg, #148dff, #6a00b1, #b666ff, #148dff);
+    --blue-purple-gradient: linear-gradient(-45deg, #375ca0, #f7cac9, #db94aa, #6271ba);
 }
 
 * {
@@ -61,25 +58,15 @@ body {
     margin-right: 10px;
 }
 
-.navbar-brand {
-    color: rgb(17, 9, 105); 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
-    font-weight: bold; 
-    font-family: 'Poppins', sans-serif;
-    display: flex; 
-    align-items: center; 
-}
-
 .navbar-toggler:hover {
-    background-color: (135, 206, 235);
-    opacity: 0.7;
+    background-color: rgba(146, 168, 209, 0.50);
     transition: opacity 0.3s ease;
 }
 
 .navbar {
-    background: rgba(250, 247, 247, 0.50);
-    backdrop-filter: blur(8px) saturate(200px);
-    box-shadow: inset;
+    background: rgba(146, 168, 209, 0.65);
+    backdrop-filter: blur(10px) saturate(120%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .navbar .container {
@@ -97,39 +84,33 @@ body {
     padding: 2rem;
 }
 
-.home-page .col-5 {
-  min-width: 0; 
+.home-page .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.profile-img-container {
-    width: 100%;
-    max-width: 350px; 
-    aspect-ratio: 1 / 1;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-
+.home-page .col-md-8,
+.home-page .col-md-4 {
+    flex: 1 1 300px;
+    min-width: 280px;
 }
 
-.profile-img-container img {
+.profile-img{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
     width: 100%;
-    height: 100%;
+    max-width: 350px;
+    height: auto;
     object-fit: cover;
-    display: block;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px) saturate(120%);
-    box-shadow: inset;
-    border-radius: 35px;
-    width: 100%;
-    max-width: 11280px;
-    position: relative;
-    margin: auto;
-    padding: 45px;
-
+    margin-top: -40px;
+    margin-left: 150px;
 }
 
 @supports not (aspect-ratio: 1 / 1) {
@@ -147,31 +128,21 @@ body {
 }
 
 .display-1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3.7rem;
-    font-weight: 700;
+    font-family: 'Dela Gothic One';
+    font-size: 80px;
     word-break: break-word;
-    line-height: 1;
-   
-
 }
 
 .display-2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.0rem;
+    font-size: 25px;
     font-weight: 500;
-
 }
 
 .display-3 {
-    font-size: 1.5rem;
+    font-size: 15px;
     white-space: normal;
     word-break: break-word;
-}
-
-.smaller-text {
-    font-size: 0.9rem; 
-    line-height: 1.5;
 }
 
 .intro-text, .display-3 {
@@ -186,13 +157,8 @@ body {
     color: white; 
 }
 
-.text-justified {
-    text-align: justify;
-    word-break: break-word; 
-}
-
 #my-contacts {
-    background: rgba(255, 20, 147, 0.1); 
+    background: rgb(98, 113, 186); 
 }
 
 #my-contacts i {
@@ -201,32 +167,65 @@ body {
     margin-right: 10px;
 }
 
+#home .display-1 {
+    margin-bottom: 0px; 
+}
+
+#home .display-2 {
+    margin-bottom: 0px;
+}
+
+#home .display-3 {
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .display-1 {
+        font-size: 55px;
+    }
+
+    .display-2 {
+        font-size: 22px;
+    }
+
+    .display-3 {
+        font-size: 14px;
+    }
+
+    .profile-img img {
+        max-width: 250px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
 @media (max-width: 768px) {
     .home-page {
         margin-top: 6rem;
         padding: 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .home-page .col-5,
+    .home-page .col-8,
     .home-page .col-4 {
         width: 100% !important;
         max-width: 100%;
         margin: 0 auto 1.2rem auto;
         float: none !important;
-    }
-
-    .home-page .col-4 { 
-        order: -1; 
-        text-align: center; 
-    }
+        text-align: center;
+        }
     
-    .home-page .col-5 { 
-        order: 1; 
-        text-align: center; 
-    }
-
-    .profile-img-container {
-        max-width: 250px; 
+    .profile-img img {
+        max-width: 200px; 
+        margin-top: 0;
+        margin-left: 0;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        align-items: center;
     }
 
     .intro-text p,
@@ -245,38 +244,55 @@ body {
     }
 
     .navbar-collapse {
-        backdrop-filter: blur(-5px) saturate(0%) brightness(20%);
-        background: rgba(135, 206, 235, 0.616);
+        background: rgba(109, 141, 201, 0.5);
         padding: 0.5rem;
+        border-radius: 10px;
     }
     
     .display-1{
-        font-size: 1.7rem;
+        font-size: 35px;
         text-align: center;
-        line-height: 1.2;
     }
 
     .display-2{
-        font-size: 1.2rem;
-        margin-top: 50px;
+        font-size: 20px;
+        margin-top: 30px;
         margin-bottom: 1px;
+        text-align: center;
     }
     .display-3{
-        font-size: 0.9rem;
+        font-size: 13px;
+        text-align: center;
+    }
+    .body{
+        background-size: 400% 400%;
+        animation: gradientMove 20s ease-in-out infinite;
     }
 
-    .card{
-        padding: 1.8rem;
+    @keyframes gradientMove {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
     }
+
 }
 
 @media (max-width: 420px) {
-    .display-3 {
-        font-size: 1.6rem;
+    .display-1 {
+        font-size: 30px;
     }
-    
+
+    .display-2{
+        font-size: 18px;
+    }
+    .display-3 {
+        font-size: 12px;
+    }
     .profile-img-container {
-        max-width: 200px; 
+        max-width: 180px;
+        align-items: center; 
+        margin: 0;
+        display: block;
     }
     
     .intro-text p,
