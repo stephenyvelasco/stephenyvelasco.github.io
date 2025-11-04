@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm rounded-5">
       <div class="container">
         <a class="navbar-brand" href="#home">
           <img src="logo.png" alt="Stepheny Velasco Logo" width="50"
@@ -35,19 +35,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link fs-5 px-3 mx-3 fw-semibold" aria-current="page"
+              <a class="nav-link fs-5 px-3 mx-2 fw-semibold" aria-current="page"
                 href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 px-3 mx-3 fw-semibold"
-                href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 px-3 mx-3 fw-semibold"
+              <a class="nav-link fs-5 px-3 mx-2 fw-semibold"
                 href="#about-me">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 px-3 mx-3 fw-semibold"
+              <a class="nav-link fs-5 px-3 mx-2 fw-semibold"
+                href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 px-3 mx-2 fw-semibold"
                 href="#my-contacts">Contact</a>
             </li>
           </ul>
@@ -58,14 +58,15 @@
     <section id="home" class="home-page">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-8 pb-5">
             <h6 class="display-2 text-white">Hi! I am</h6>
-            <h1 class="display-1 text-white text-nowrap ">STEPHENY</h1>
-            <h1 class="display-1 text-white text-nowrap ">VELASCO</h1>
+            <h1 class="display-1 text-white text-nowrap">STEPHENY</h1>
+            <h1 class="display-1 text-white text-nowrap">VELASCO</h1>
             <p class="display-3 text-white text-justified smaller-text">Junior
               IT student | Aspiring Web and Software Developer</p>
+            <button type="button" class="btn btn-outline-primary">Contact ➜</button>
           </div>
-          <div class="col-md-4">
+          <div class="col-4">
             <div class="profile-img">
               <img src="image1.png" alt="Profile Picture" class="img-fluid">
             </div>
@@ -74,82 +75,23 @@
       </div>
     </section>
 
-    <section id="projects" class="projects-section text-white py-5">
-      <div class="container">
-        <div class="card project-section text-center">
-          <div class="card-body">
-            <div class="row g-4 justify-content-center">
-              <h2 class="mb-4 text-center">Projects</h2>
-            </div>
-            <div class="row g-4 justify-content-center">
-              <div class="col-md-4">
-                <a href="https://stephenyvelasco.github.io/webdev-project1" class="project-link">
-                  <div class="card project-card text-center">
-                    <div class="card-body">
-                      <p class="card-text fw-semibold">Web Development</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="https://example.com/software" class="project-link">
-                  <div class="card project-card text-center">
-                    <div class="card-body">
-                      <p class="card-text fw-semibold">Software Projects</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="https://example.com/uiux" class="project-link">
-                  <div class="card project-card text-center">
-                    <div class="card-body">
-                      <p class="card-text fw-semibold">UI/UX Design</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+    <section id="about-me" class="about-section">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-5">
+            <div class="card bg-transparent p-0 my-5 shadow">
+              <img src="image2.jpg" alt="Steph Velasco Picture">
             </div>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="about-me" class="about-section py-5 text-white">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="mb-4 text-center">About Me</h2>
-            <p class="about-description lead text-center">
-              As an enthusiastic IT student. I currently have a working
-              knowledge of HTML, CSS,JavaScript, and Bootstrap, which allows me
-              to create responsive and user-friendly applications. I'm
-              passionate about turning ideas into functional digital experiences
-              and am always seeking new challenges to expand my skillset!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="my-contacts" class="contact-section py-5 text-white">
-      <div class="container">
-        <div class="card contact-card text-center">
-          <div class="card-body">
-            <h2 class="mb-4 text-center">Contact</h2>
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <p class="text-center lead mb-4">Get in touch for collaborations
-                  or
-                  opportunities!</p>
-                <ul class="list-unstyled text-center">
-                  <li class="mb-3"><i class="bi bi-envelope"></i> Email:
-                    ma.stephvelasco@gmail.com</li>
-                  <li class="mb-3"><i class="bi bi-github"></i> GitHub:
-                    github.com/stephenyvelasco</li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-7">
+            <p class="me-5 mt-5 mb-0 ps-1 pe-5 text-dark">✦ About Me</p>
+            <h2 class="fw-bold me-5 mt-1 ps-1 pe-5 text-dark">Stepheny Velasco</h2>
+            <p class="me-5 my-4 ps-1 pe-5 mb-5 text-dark text-justify">
+              I am a 3rd-year BSIT student with a developing foundation in web development. I currently have working knowledge of HTML, 
+              CSS, JavaScript, and Bootstrap, enabling me to build responsive and user-friendly web interfaces. Beyond academics, I am 
+              passionate about dancing and proudly serve as a member and Technical Coordinator Officer of Indak Batangan. I also have 
+              experience in creative tools such as Photoshop, Canva, and video editing, allowing me to blend both technical and creative 
+              skills in my projects. I am committed to continuous learning and eager to take on new challenges that will help me grow as an IT professional.</p>
           </div>
         </div>
       </div>
