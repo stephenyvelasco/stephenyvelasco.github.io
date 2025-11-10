@@ -155,7 +155,7 @@ body {
     background: #efdae0;
 }
 
-.about-section .col-5 {
+.about-section .col-md-5 {
   display: flex;
   justify-content: center;
 }
@@ -167,9 +167,27 @@ body {
   border-radius: 15px;
   object-fit: cover;
 }
+.about-details{
+    text-align: justify;
+    padding-right: 100px;
+}
 .about-section .card:hover {
     transform: none;
     box-shadow: none;
+}
+.services {
+    background: transparent;
+}
+.featured-projects{
+    background: #efdae0;
+}
+.featured-projects .details{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.featured-projects .card:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 #home .display-1 {
     margin-bottom: 0px; 
@@ -262,5 +280,19 @@ body {
     body{
         background-size: 200% 200%;
         animation: gradientMove 20s ease-in-out infinite;
+        
+    }
+    .about-section img {
+    width: 100%;
+    max-width: 200px; 
+    }
+    .about-details{
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 40px;
+    }
+    .featured-projects .details{
+        margin-left:  40px !important;
+        margin-right: 40px !important;
     }
 }
