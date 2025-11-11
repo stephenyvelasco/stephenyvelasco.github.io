@@ -185,9 +185,20 @@ body {
     margin-left: 100px;
     margin-right: 100px;
 }
+.featured-projects .card {
+  overflow: hidden;
+  border-radius: 1rem; 
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.featured-projects .card img {
+  transition: transform 0.6s ease;
+}
 .featured-projects .card:hover {
-  transform: none !important;
-  box-shadow: none !important;
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.featured-projects .card:hover img {
+  transform: scale(1.1);
 }
 #home .display-1 {
     margin-bottom: 0px; 
